@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Computer Project</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2px);
+      z-index: 1;
+    }
+
+    .hero-text {
+      color: white;
+      text-align: center;
+      z-index: 2;
+      position: relative;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd54f;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-text" data-aos="zoom-in">
+      <h1>Gallery</h1>
+      <p>Images of my work</p>
+    </div>
+  </section>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="information.html">Information</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
+  <section class="gallery" data-aos="fade-up">
+    <div class="gallery-item">
+    <img src="https://ik.imagekit.io/3boct7roi/Screenshot%202025-05-16%20203809.png?updatedAt=1747408128822" alt="Code">
+    <p class="caption">Image of Home Page Code</p>
+    </div>
+    <div class="gallery-item">
+    <img src="https://ik.imagekit.io/3boct7roi/Screenshot%202025-05-16%20205239.png?updatedAt=1747408982885" alt="Code1">
+    <p class="caption">Image of About Page Code</p>
+    </div>
+    <div class="gallery-item">
+    <img src="https://ik.imagekit.io/3boct7roi/Screenshot%202025-05-16%20205512.png?updatedAt=1747409129595" alt="Code2">
+    <p class="caption">Image of Gallery Page Code</p>
+    </div>
+    <div class="gallery-item">
+    <img src="https://ik.imagekit.io/3boct7roi/Screenshot%202025-05-16%20210717.png?updatedAt=1747409859616" alt="Code1">
+    <p class="caption">Image of Home Page</p>
+    </div>
+    <div class="gallery-item">
+    <img src="https://miro.medium.com/v2/resize:fit:720/0*d3RHRzpXSzk6-9la.png" alt="Application">
+    <p class="caption">Application used</p>
+    </div>
+    <div class="gallery-item">
+    <img src="https://miro.medium.com/v2/resize:fit:5120/1*l4xICbIIYlz1OTymWCoUTw.jpeg" alt="Programming Languages">
+    <p class="caption">Programming Language Used</p>
+    </div>
+  </section>
+
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 My School Project. Powered by inspiration and creativity.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
