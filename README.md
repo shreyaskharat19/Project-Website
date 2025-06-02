@@ -1,4 +1,4 @@
-[# Project-Website](https://shreyaskharat19.github.io/Project-Website/gallery.html)
+# Project-Website
 A perfect blend of html and css to make a great website.
 
 # Important Note!!
